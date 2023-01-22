@@ -19,11 +19,11 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 This is Xuanzhou Chen. I am currently a MS student at NYU. My research interests are:
-1. Trustworthy Machine Learning \n
-2. Information Theory \n
-3. Machine Learning Theory \n
-4. Natural Language Processing \n
-4. Applied Crptography  \n
+1. Trustworthy Machine Learning 
+2. Information Theory 
+3. Machine Learning Theory 
+4. Natural Language Processing 
+4. Applied Crptography  
 \n
 Specifically, I am exploring some research problems as following: 1) How to make 
 
