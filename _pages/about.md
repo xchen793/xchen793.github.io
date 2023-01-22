@@ -18,14 +18,14 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-This is Xuanzhou Chen. I am currently a MS student at NYU. My research interests are:
+This is Xuanzhou Chen. I am currently a MS student at NYU. My research interests lie in the intersection of :
 1. Trustworthy Machine Learning 
 2. Information Theory 
 3. Machine Learning Theory 
 4. Natural Language Processing 
-4. Applied Crptography  
-\n
-Specifically, I am exploring some research problems as following: 1) How to make 
+5. Applied Crptography  
+
+Specifically, I am exploring some research problems as following: 1) How to make language models more robust against adversarial perturbations via information-theoretic approaches?  2) How to make machine learning model more computational efficient? 3) How to mitigate the inherant bias in training dataset while deploying ML/DL model?
 
 
 
