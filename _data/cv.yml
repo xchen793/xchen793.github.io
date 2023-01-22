@@ -14,18 +14,19 @@
     - title: MS
       institution: New York University
       year: 2023
-      Major:
-        - Computer Engineering
-      Courses:
-        - Data Structure and Algorithms
-        - Machine Learning
-        - Intro to JAVA
-        - Computer System Architecture
-        - Internet Architecture and Protocols
-        - Deep Learning
-        - Information Theory
-        - Machine Learning Security
-        - Big Data
+      
+        Major:
+          - Computer Engineering
+        Courses:
+          - Data Structure and Algorithms
+          - Machine Learning
+          - Intro to JAVA
+          - Computer System Architecture
+          - Internet Architecture and Protocols
+          - Deep Learning
+          - Information Theory
+          - Machine Learning Security
+          - Big Data
 #           contents:
 #             - Sub-description 1.
 #             - Sub-description 2.
