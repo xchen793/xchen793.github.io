@@ -11,14 +11,10 @@
 - title: Education
   type: time_table
   contents:
-    - title: MS
+    - title: MS in Computer Engineering
       institution: New York University
-      year: 2023
-      major: Computer Engineering
+      year: 2023 
       description:
-        - title: major
-          contents:
-            - Computer Engineering
         - title: Courses
           contents:
             - Data Structure and Algorithms
