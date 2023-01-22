@@ -25,7 +25,10 @@ This is Xuanzhou Chen. I am currently a MS student at NYU. My research interests
 4. Natural Language Processing 
 5. Applied Crptography  
 
-Specifically, I am exploring some research problems as following: 1) How to make language models more robust against adversarial perturbations via information-theoretic approaches?  2) How to make machine learning model more computational efficient? 3) How to mitigate the inherant bias in training dataset while deploying ML/DL model?
+Specifically, I am exploring some research problems as following: 
+1) How to make language models more robust against adversarial perturbations via information-theoretic approaches?  
+2) How to make machine learning model more computational efficient? 
+3) How to mitigate the inherant bias in training dataset while deploying ML/DL model?
 
 
 
