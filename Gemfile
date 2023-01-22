@@ -1,10 +1,6 @@
 source 'https://rubygems.org'
 group :jekyll_plugins do
-<<<<<<< HEAD
     gem 'jekyll', '~> 0.1.0'
-=======
-    gem 'jekyll'，'~> 0.1.0'
->>>>>>> ef81f00c0cf159e2e637ceefcdc44dac9d7b1294
     gem 'jekyll-archives'
     gem 'jekyll-diagrams'
     gem 'jekyll-email-protect'
