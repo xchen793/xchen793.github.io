@@ -15,16 +15,21 @@
       institution: New York University
       year: 2023
       major: Computer Engineering
-      courses:
-        - Data Structure and Algorithms
-        - Machine Learning
-        - Intro to JAVA
-        - Computer System Architecture
-        - Internet Architecture and Protocols
-        - Deep Learning
-        - Information Theory
-        - Machine Learning Security
-        - Big Data
+      description:
+        - title: major
+          contents:
+            - Computer Engineering
+        - title: Courses
+          contents:
+            - Data Structure and Algorithms
+            - Machine Learning
+            - Intro to JAVA
+            - Computer System Architecture
+            - Internet Architecture and Protocols
+            - Deep Learning
+            - Information Theory
+            - Machine Learning Security
+            - Big Data
       contents:
         - Sub-description 1.
         - Sub-description 2.
