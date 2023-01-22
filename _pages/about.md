@@ -22,7 +22,7 @@ This is Xuanzhou Chen. I am currently a MS student at NYU. My research interests
 2. Information Theory 
 3. Machine Learning Theory 
 4. Natural Language Processing 
-5. Applied Crptography  
+5. Computing Algorithms  
 
 Specifically, I am exploring some research problems as following: 
 1. How to make language models more robust against adversarial perturbations via information-theoretic approaches?  
