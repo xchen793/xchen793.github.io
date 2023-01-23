@@ -26,32 +26,41 @@
             - Information Theory
             - Machine Learning Security
             - Big Data
-#     - title: Federal teaching diploma
-#       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-#       year: 1900
+    - title: BS in Mathematics
+      institution: University of Wisconsin Madison
+      year: 2020
+      description:
+        - title: Courses
+          contents:
+            - Real Analysis/Abstract Algebra/Topology
+            - Optimization
+            - Probability & Statistics
+            - Stochastic Process
+            - Complex Functions
+            - Combinatorics
+            - Number Theory
+            - ODE/PDE
+            - Numerical Analysis
+
+# - title: Experience
+#   type: time_table
+#   contents:
+#     - title: Professor of Theoretical Physics
+#       institution: Institute for Advanced Study, Princeton University
+#       year: 1933 - 1955
 #       description:
 #         - Description 1.
 #         - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+#         - title: Description 3.
+#           contents:
+#             - Sub-description 1.
+#             - Sub-description 2.
+#     - title: Visiting Professor
+#       institution: California Institute of Technology, Pasadena, California, US
+#       year: 1933
+#       description:
+#         - Description 1.
+#         - Description 2.
 
 #     - title: Director
 #       institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
