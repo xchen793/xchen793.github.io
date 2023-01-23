@@ -1,12 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - xchen793
+  
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - xchen793/channel-combined-transformer-midproject 
+  - xchen793/channel-combined-transformer-finalproject
+  - xchen793/DL_mini_ResNet 
+  - xchen793/MLsecurity_fall22 
+
+
