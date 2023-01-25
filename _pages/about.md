@@ -18,18 +18,23 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 This is Xuanzhou Chen. I am currently a MS student at NYU and also a 2023 Phd applicant. My research interests lie in the intersection of :
-1. Trustworthy Machine Learning 
+1. Machine Learning Privacy & Security 
 2. Information Theory 
-3. Machine Learning Theory 
-4. Natural Language Processing 
-5. Computing Algorithms  
+3. Machine Learning Theory (Statistics)
+4. Deep Learning Algorithm 
+5. Transfer Learning/Domain Adaptation  
 
-Specifically, I am exploring some research problems as following: 
-1. How to make language models more robust against adversarial perturbations via information-theoretic approaches?  
-2. How to make machine learning model more computational efficient? 
-3. How to mitigate the inherent bias in training dataset while deploying ML/DL model?
+I am very interested in building efficient/robust/generalized deep learning algorithms to be applied in multiple fields such as NLP and medical imaging. My research vision is to bridge the gap between theoreties and applications in deep learning.
 
-I am always looking for research collaborations!
+Based on my previous projects, I am eagerly exploring some research problems as following: 
+1. How to make deep neural network models more robust against adversarial perturbations? Is there any theoretical breakthough could be made via information-theoretic approach?[Project](https://xchen793.github.io/projects/5_project/)
+2. How to generalize a deep learning model (such as a transformer-based model) such that it could adapt to multi-datasets or multi-tasks? [Note]
+3. How to make the training process more computationally efficient? One way is, how to remove "redundant" information while training DL models? [Project](https://xchen793.github.io/projects/1_project/)
+4. How to mitigate the inherent bias in pretrained models and train them fairly in downstream tasks? 
+
+
+2023 New Year Aspirations:
+    Stay curious, read more, learn more, experiement more, socialize more, and start to draft my research proposal!
 
 
 

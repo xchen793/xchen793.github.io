@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Inherent Bias Mitigation in Language Models 
+description: Detect the bias via attention map visualization tools and proposed a retraining scheme for bias mitigation. Additionally, reimplemented INLP method for bias mitigation. Collaboration with Swapan Jain and Rakshit Lodha.
 img: assets/img/12.jpg
 importance: 1
 category: 2023
