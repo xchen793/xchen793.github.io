@@ -29,8 +29,8 @@ I am very interested in building efficient/robust/generalized deep learning algo
 Based on my previous projects, I am eagerly exploring some research problems as following: 
 1. How to make deep neural network models more robust against adversarial perturbations? Is there any theoretical breakthough could be made via information-theoretic approach?[Project](https://xchen793.github.io/projects/5_project/)
 2. How to generalize a deep learning model (such as a transformer-based model) such that it could adapt to multi-datasets or multi-tasks? [Note]
-3. How to make the training process more computationally efficient? One way is, how to remove "redundant" information while training DL models? [Project](https://xchen793.github.io/projects/1_project/)
-4. How to mitigate the inherent bias in pretrained models and train them fairly in downstream tasks? 
+3. How to make the training process more computationally efficient? One way is, how to remove "redundant" information while training DL models? [Project](https://xchen793.github.io/projects/2_project/)
+4. How to mitigate the inherent bias in pretrained models and train them fairly in downstream tasks? [Project](https://xchen793.github.io/projects/1_project/)
 
 
 2023 New Year Aspirations:
