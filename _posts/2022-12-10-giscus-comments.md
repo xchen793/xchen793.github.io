@@ -98,7 +98,7 @@ Hence, we have proved for (a) is the definition.  Q.E.D.
 
 For some situations where different data sets issued from different ambient space, the notion of the Hausdorff distance can be generalized to the Gromov-Hausdorff distance for comparison of any pair of compact metric spaces.
 
-$$\textbf{Def 2.4 Isometric}$$: Two metric spaces $$(M_{1}, \rho_{1})$$ and $$(M_{2}, \rho_{2})$$ are isometric if there exists a bijection $\phi$: $M_{1} \rightarrow M_{2}$ s.t. $$\rho_{2}(\phi(x), \phi(y)) = \rho_{1}(x,y)$$ for any $$x, y \in M_{1}$$.
+$$\textbf{Def 2.4 Isometric}$$: Two metric spaces $$(M_{1}, \rho_{1})$$ and $$(M_{2}, \rho_{2})$$ are isometric if there exists a bijection $$\phi$$: $$M_{1} \rightarrow M_{2}$$ s.t. $$\rho_{2}(\phi(x), \phi(y)) = \rho_{1}(x,y)$$ for any $$x, y \in M_{1}$$.
 
 $$\textbf{Def 2.5 The Gromov-Hausdorff Distance}$$: The Gromov-Hausdorff Distance $$d_{GH}(M_{1}, M_{2})$$ between two compact metric spaces is the infimum of $$r \in \mathcal{R}, r \geq 0$$, such that there exists a metric space $$(M_{1}, \rho)$$ and two compact subspaces $$C_{1}, C_{2} \subseteq M$$, isometric to $$M_{1}, M_{2}$$ s.t. $$d_{H}(C_{1}, C_{2}) \leq r$$.
 
