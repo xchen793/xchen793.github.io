@@ -35,14 +35,30 @@ $$Lemma(2.1)$$:
 
 $$
 \begin{align*}
-d_{H}(A, B) &= \max \left\{ sup_{b \in B} d(b,A) , sup_{a \in A} d(a,B) \right\} \\
-&= sup_{x \in M} |d(x,A) - d(x,B)| \\
-&= ||d(\cdot, A) - d(\cdot, B)||_{\infty}
+d_{H}(A, B) &= \max \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}   (a)\\
+&= \sup_{x \in M} |d(x,A) - d(x,B)|  (b)\\
+&= ||d(\cdot, A) - d(\cdot, B)||_{\infty} (c)
 \end{align*}
 $$
 
-## Covers
+$$proof$$: 
+According to the definition 2.3, $$\sup_{b \in B} d(b,A) \geq smallest $$\delta$$ satisfying ii) since for any $$b \in B$$, we can always pick $$a \in A$$ which satisfies $$\rho(b,a) = \inf_{a \in A} \rho(b,a) \leq \sup_{b \in B} d(b,A)$$. Similarly for i). Hence, $$d_{H}(A,B) \leq \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}$$.
+
+Conversely, 
 
 
-## Simplicial Complexes
+
+ and similarly $$\sup_{a \in A} d(a,B)$$ satisfying i). 
+(a) \rightarrow (b)
+
+
+
+## 3. Covers
+
+
+## 4. Simplicial Complexes
+
+
+
+ref: 
 
