@@ -21,8 +21,8 @@ iii) (The Triange Inequality)$$\rho(x,z) \leq \rho(x,y) + \rho(y,z)$$
 $$\textbf{Def 2.2}$$: A subset $$S \subseteq R$$ is called compact if every sequence in $$S$$ has a subsequence that converges to a point in $$S$$.
 
 $$\textbf{Def 2.3}$$: Given two compact subsets $$A, B \subseteq M$$, the Hausdroff distance $$d_{H}(A,B)$$ between set $$A$$ and set $$B$$ is the smallest nonnegative number $$\delta$$ such that:
-i) $$\forall a \in A$$, $$\exist b \in B$$ s.t. $$\rho(a,b) \leq \delta$$.
-ii) $$\forall b \in B$$, $$\exist a \in A$$ s.t. $$\rho(a,b) \leq \delta$$.
+i) $$\forall a \in A$$, $$\exists b \in B$$ s.t. $$\rho(a,b) \leq \delta$$.
+ii) $$\forall b \in B$$, $$\exists a \in A$$ s.t. $$\rho(a,b) \leq \delta$$.
 
 In other words, suppose we denote by $$d(\cdot, C): M \rightarrow \mathcal{R}_{+}$$ the distance function for $$\forall x \in M$$,
 
