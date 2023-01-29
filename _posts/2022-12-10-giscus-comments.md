@@ -95,8 +95,9 @@ Conversely, we show that $$\sup_{b \in B} d(b,A) \leq $$ smallest $$\delta$$ sat
 Hence, we have proved for (a) is the definition.  Q.E.D.
 
 
-
+```
 For some situations where different data sets issued from different ambient space, the notion of the Hausdorff distance can be generalized to the Gromov-Hausdorff distance for comparison of any pair of compact metric spaces.
+```
 
 $$\textbf{Def 2.4 Isometric}$$: Two metric spaces $$(M_{1}, \rho_{1})$$ and $$(M_{2}, \rho_{2})$$ are isometric if there exists a bijection $$\phi$$: $$M_{1} \rightarrow M_{2}$$ s.t. $$\rho_{2}(\phi(x), \phi(y)) = \rho_{1}(x,y)$$ for any $$x, y \in M_{1}$$.
 
