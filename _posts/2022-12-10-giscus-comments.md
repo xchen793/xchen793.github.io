@@ -36,7 +36,8 @@ $$Lemma(2.1)$$:
 $$
 \begin{align*}
 d_{H}(A, B) &= \max \left\{ sup_{b \in B} d(b,A) , sup_{a \in A} d(a,B) \right\} \\
-&= sup_{x \in M} |d(x,A) - d(x,B)| = ||d(\cdot, A) - d(\cdot, B)||_{\infty}
+&= sup_{x \in M} |d(x,A) - d(x,B)| \\
+&= ||d(\cdot, A) - d(\cdot, B)||_{\infty}
 \end{align*}
 $$
 
