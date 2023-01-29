@@ -13,7 +13,7 @@ giscus_comments: false
 
 ## 2. Metric Space
 
-A metric space ($$M$$, $$\rho$$) is a set $$M$$ with a function $$\rho : M \times M \rightarrow \mathcal{R}_{+}$$
+\textbf{Def 2.1}: A metric space ($$M$$, $$\rho$$) is a set $$M$$ with a function $$\rho : M \times M \rightarrow \mathcal{R}_{+}$$, such that $$ \forall x, y, z \in M$$
 
 
 
