@@ -13,15 +13,18 @@ giscus_comments: false
 
 ## 2. Metric Space
 
-\textbf{Def 2.1}: A metric space ($$M$$, $$\rho$$) is a set $$M$$ with a function $$\rho : M \times M \rightarrow \mathcal{R}_{+}$$, such that $$ \forall x, y, z \in M$$, the following is the case:
+$$\textbf{Def 2.1}$$: A metric space ($$M$$, $$\rho$$) is a set $$M$$ with a function $$\rho : M \times M \rightarrow \mathcal{R}_{+}$$, such that $$ \forall x, y, z \in M$$, the following is the case:
 i) (Positivity) $$ \rho(x,y) \geq 0$$ and $$\rho(x,y) = 0$$ iff $$x = y$$.
 ii) (Symmetry) $$\rho(x,y) = \rho(y,x)$$
 iii) (The Triange Inequality)$$\rho(x,z) \leq \rho(x,y) + \rho(y,z)$$
 
-\textbf{Def 2.2}: A subset $$S \subseteq R$$ is called compact if every sequence in $$S$$ has a subsequence that converges to a point in $$S$$.
+$$\textbf{Def 2.2}$$: A subset $$S \subseteq R$$ is called compact if every sequence in $$S$$ has a subsequence that converges to a point in $$S$$.
 
-\textbf{Def 2.3}: Given two compact subsets $$A, B \subseteq M$$, the Hausdroff distance $$d_{H}(A,B)$$ between $$A$$ and 
+$$\textbf{Def 2.3}$$: Given two compact subsets $$A, B \subseteq M$$, the Hausdroff distance $$d_{H}(A,B)$$ between set $$A$$ and set $$B$$ is the smallest nonnegative number $$\delta$$ such that:
+i) $$\forall a \in A$$, $$\exist b \in B$$ s.t. $$\rho(a,b) \leq \delta$$.
+ii) $$\forall b \in B$$, $$\exist a \in A$$ s.t. $$\rho(a,b) \leq \delta$$.
 
+In other words, suppose we denote by $$d(\cdot, C): M \rightarrow \mathcal{R}_{+}$$ the distance function for $$\forall x \in M$$,
 
 
 ## Covers
