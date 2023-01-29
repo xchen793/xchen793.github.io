@@ -35,9 +35,9 @@ $$Lemma(2.1)$$:
 
 $$
 \begin{align*}
-d_{H}(A, B) &= \max \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}   (a)\\
-&= \sup_{x \in M} |d(x,A) - d(x,B)|  (b)\\
-&= ||d(\cdot, A) - d(\cdot, B)||_{\infty} (c)
+d_{H}(A, B) &= \max \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}  \quad\quad (a)\\
+&= \sup_{x \in M} |d(x,A) - d(x,B)| \quad\quad (b)\\
+&= ||d(\cdot, A) - d(\cdot, B)||_{\infty} \quad\quad (c)
 \end{align*}
 $$
 
@@ -45,7 +45,9 @@ $$proof$$:
 
 According to the definition 2.3, $$\sup_{b \in B} d(b,A) \geq $$ smallest $$\delta$$ satisfying ii) since for any $$b \in B$$, we can always pick $$a \in A$$ which satisfies $$\rho(b,a) = \inf_{a \in A} \rho(b,a) \leq \sup_{b \in B} d(b,A)$$. Similarly for i). Hence, $$d_{H}(A,B) \leq \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}$$.
 
-Conversely, we show that $$\sup_{b \in B} d(b,A) \leq $$ smallest $$\delta$$ satisfying ii), and similarly for i) by contradiction. Suppose not, then $$\exists b \in B$$ and $$a \in A$$ such that $$\rho(a,b) \geq \inf_{a \in A} \rho(a,c) = sup_{b \in B} d(a,b) > \delta $$.  
+Conversely, we show that $$\sup_{b \in B} d(b,A) \leq $$ smallest $$\delta$$ satisfying ii), and similarly for i). Suppose not, then $$\exists b \in B$$ and $$a \in A$$ such that $$\rho(a,b) \geq \inf_{a \in A} \rho(a,b) = \sup_{b \in B} d(a,b) > $$ smallest $$\delta$$ satisfying ii), which is contradiction.
+
+Hence, we have proved for (a) is the definition.
 
 
 
