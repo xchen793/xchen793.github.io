@@ -41,7 +41,7 @@ d_{H}(A, B) &= \max \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right
 \end{align*}
 $$
 
-$$ 
+
 Proof:
 
 According to the definition 2.3, $$\sup_{b \in B} d(b,A) \geq $$ smallest $$\delta$$ satisfying ii) since for any $$b \in B$$, we can always pick $$a \in A$$ which satisfies $$\rho(b,a) = \inf_{a \in A} \rho(b,a) \leq \sup_{b \in B} d(b,A)$$. Similarly for i). Hence, $$d_{H}(A,B) \leq \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}$$.
@@ -50,10 +50,6 @@ Conversely, we show that $$\sup_{b \in B} d(b,A) \leq $$ smallest $$\delta$$ sat
 
 Hence, we have proved for (a) is the definition.  Q.E.D.
 
-$$
-
-
-(a) \rightarrow (b)
 
 
 For some situations where different data sets issued from different ambient space, the notion of the Hausdorff distance can be generalized to the Gromov-Hausdorff distance for comparison of any pair of compact metric spaces.
