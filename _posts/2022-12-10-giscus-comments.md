@@ -31,6 +31,7 @@ toc:
   - name: Metric Space
   - name: Covers
   - name: Simplicial Complexes
+  - name: References
   
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -92,7 +93,7 @@ According to the definition 2.3, $$\sup_{b \in B} d(b,A) \geq $$ smallest $$\del
 
 Conversely, we show that $$\sup_{b \in B} d(b,A) \leq $$ smallest $$\delta$$ satisfying ii), and similarly for i). Suppose not, then $$\exists b \in B$$ and $$a \in A$$ such that $$\rho(a,b) \geq \inf_{a \in A} \rho(a,b) = \sup_{b \in B} d(a,b) > $$ smallest $$\delta$$ satisfying ii), which is contradiction.
 
-Hence, we have proved for (a) is the definition.  Q.E.D.
+Hence, we have proved for (a) is the definition. ... Q.E.D.
 
 
 **Note:**
@@ -107,7 +108,11 @@ $$\textbf{Def 2.5 The Gromov-Hausdorff Distance}$$: The Gromov-Hausdorff Distanc
 
 ## 4. Simplicial Complexes
 
+Intro: This section gives me insights to futher optimize my previous project - ```K-means clustering for text-classifier attack```. Beyond connecting pairs of nearby data points by edges (clustering algorithm), a central idea in TDA is to build higher-dimensional equivalents of neighboring graphs using not only connecting pairs but also ($$k+1$$-uple) of nearby data points. $$\textbf{Simplicial complexes}$$(can be seen as higher-dimensional generalization of graphs, mathematical objects that are both topological and combinatorial) allows us to identify new topological features such as cycles, voids, and their higher-dimensional counterpart.
 
 
-ref: 
+
+## 5. References
+
+https://www.frontiersin.org/articles/10.3389/frai.2021.667963/full 
 
