@@ -42,9 +42,10 @@ d_{H}(A, B) &= \max \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right
 $$
 
 $$proof$$: 
+
 According to the definition 2.3, $$\sup_{b \in B} d(b,A) \geq $$ smallest $$\delta$$ satisfying ii) since for any $$b \in B$$, we can always pick $$a \in A$$ which satisfies $$\rho(b,a) = \inf_{a \in A} \rho(b,a) \leq \sup_{b \in B} d(b,A)$$. Similarly for i). Hence, $$d_{H}(A,B) \leq \left\{ \sup_{b \in B} d(b,A) , \sup_{a \in A} d(a,B) \right\}$$.
 
-Conversely, 
+Conversely, we show that $$\sup_{b \in B} d(b,A) \leq $$ smallest $$\delta$$ satisfying ii), and similarly for i) by contradiction. Suppose not, 
 
 
 
