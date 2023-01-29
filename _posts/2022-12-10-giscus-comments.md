@@ -4,7 +4,7 @@ title: TDA Notes(1)
 date: 2023-01-28 11:59:00-0400
 description: Pipeline, Metric Spaces, Covers, and Simplicial Complexes
 categories: learning-notes data-analysis
-giscus_comments: false
+giscus_comments: true
 ---
 bibliography: 2018-12-22-distill.bib
 
