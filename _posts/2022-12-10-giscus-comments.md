@@ -29,8 +29,11 @@ i) $$\forall a \in A$$, $$\exists b \in B$$ s.t. $$\rho(a,b) \leq \delta$$.
 
 ii) $$\forall b \in B$$, $$\exists a \in A$$ s.t. $$\rho(a,b) \leq \delta$$.
 
-Alternatively, suppose we denote by $$d(\cdot, C): M \rightarrow \mathcal{R}_{+}$$ the distance function for $$\forall x \in M$$ to the compact subset $$C \subsesteq M$$ is $$inf_{c \in C} \rho(x,c)$$.
+Alternatively, suppose we denote by $$d(\cdot, C): M \rightarrow \mathcal{R}_{+}$$ the distance function for $$\forall x \in M$$ to the compact subset $$C \subseteq M$$ is $$\inf_{c \in C} \rho(x,c)$$.
 
+$$Lemma(2.1)$$: $$
+d_{H}(A, B) = \max 
+$$
 
 ## Covers
 
