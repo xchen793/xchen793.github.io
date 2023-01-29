@@ -12,11 +12,10 @@ giscus_comments: false
     2. 
 
 ## 2. Metric Space
-$$
 
-A metric space ($M$, $\rou$) is a set $M$ with a function $\rou : M \times M \rightarrow \mathcal{R}_{+}$
+A metric space ($$M$$, $$\rou$$) is a set $$M$$ with a function $$\rou : M \times M \rightarrow \mathcal{R}_{+}$$
 
-$$
+
 
 
 ## Covers
