@@ -13,8 +13,14 @@ giscus_comments: false
 
 ## 2. Metric Space
 
-\textbf{Def 2.1}: A metric space ($$M$$, $$\rho$$) is a set $$M$$ with a function $$\rho : M \times M \rightarrow \mathcal{R}_{+}$$, such that $$ \forall x, y, z \in M$$
+\textbf{Def 2.1}: A metric space ($$M$$, $$\rho$$) is a set $$M$$ with a function $$\rho : M \times M \rightarrow \mathcal{R}_{+}$$, such that $$ \forall x, y, z \in M$$, the following is the case:
+i) (Positivity) $$ \rho(x,y) \geq 0$$ and $$\rho(x,y) = 0$$ iff $$x = y$$.
+ii) (Symmetry) $$\rho(x,y) = \rho(y,x)$$
+iii) (The Triange Inequality)$$\rho(x,z) \leq \rho(x,y) + \rho(y,z)$$
 
+\textbf{Def 2.2}: A subset $$S \subseteq R$$ is called compact if every sequence in $$S$$ has a subsequence that converges to a point in $$S$$.
+
+\textbf{Def 2.3}: Given two compact subsets $$A, B \subseteq M$$, the Hausdroff distance $$d_{H}(A,B)$$ between $$A$$ and 
 
 
 

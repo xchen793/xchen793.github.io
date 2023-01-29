@@ -24,12 +24,13 @@ This is Xuanzhou Chen. I am currently a MS student at NYU and also a 2023 Phd ap
 4. Deep Learning Algorithm 
 5. Daya Analysis
 
-
 Overall, I am eagerly exploring some research problems as following: 
 1. How to make deep neural network models more robust against adversarial perturbations? -> R-D theory?
 2. How to generalize a deep learning model (such as a transformer-based model) by investigating inner topological strcture in neural networks and high dimensional data? 
 3. How to make the training process more computationally efficient? How to remove "redundant" information while training DL models? 
 4. How to mitigate the inherent bias in pretrained models and train them fairly in downstream tasks? 
+
+Currently, I am self-learning Topological Structures in Neural Networks, Topological Data Analysis, and Multi-task Learning.
 
 
 2023 New Year Aspirations:
