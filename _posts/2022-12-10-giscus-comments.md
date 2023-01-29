@@ -21,7 +21,7 @@ ii) (Symmetry) $$\rho(x,y) = \rho(y,x)$$
 
 iii) (The Triange Inequality) $$\rho(x,z) \leq \rho(x,y) + \rho(y,z)$$
 
-$$\textbf{Def 2.2}$$: A subset $$S \subseteq R$$ is called compact if every sequence in $$S$$ has a subsequence that converges to a point in $$S$$.
+\textbf{Def 2.2}: A subset $$S \subseteq R$$ is called compact if every sequence in $$S$$ has a subsequence that converges to a point in $$S$$.
 
 $$\textbf{Def 2.3}$$: Given two compact subsets $$A, B \subseteq M$$, the Hausdroff distance $$d_{H}(A,B)$$ between set $$A$$ and set $$B$$ is the smallest nonnegative number $$\delta$$ such that:
 
