@@ -22,7 +22,7 @@ This is Xuanzhou Chen. I am currently a MS student at NYU and also a 2023 Phd ap
 2. Information Theory 
 3. Machine Learning Theory 
 4. Deep Learning Algorithm 
-5. Daya Analysis
+5. Data Analysis
 
 Overall, I am eagerly exploring some research problems as following: 
 1. How to make deep neural network models more robust against adversarial perturbations? -> R-D theory?
