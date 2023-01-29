@@ -6,6 +6,7 @@ description: Pipeline, Metric Spaces, Covers, and Simplicial Complexes
 categories: learning-notes data-analysis
 giscus_comments: false
 ---
+bibliography: 2018-12-22-distill.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
