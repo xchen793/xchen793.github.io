@@ -54,7 +54,9 @@ _styles: >
 
 ## 1. TDA Pipeline
     1. The input is assumed to be a finite set of points with a notion of distance - or similarity - between them. The distance can be 1) induced by the metric in the ambient space(e.g. 2D? 3D?) or 2) an intrinsic metric defined by a pairwise distance matrix.
-    2. 
+    2. A “continuous” shape is built on the top of the data in order to highlight the underlying topology or geometry.
+    3. Topological or geometric information is extracted from the structures built on the top of the data.
+    4. The extracted topological and geometric information provides new families of features and descriptors of the data.
 
 ## 2. Metric Space
 
