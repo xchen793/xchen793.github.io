@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Xuanzhou "Lorraine" Chen</title>
+    <meta name="description" content="Publications by Xuanzhou Chen - Research in machine learning, statistical learning theory, and AI for science.">
+
+```
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --primary: #0f172a;
+        --secondary: #1e293b;
+        --accent: #2563eb;
+        --highlight: #1d4ed8;
+        --text: #111827;
+        --text-light: #4b5563;
+        --bg: #fafafa;
+        --bg-card: #ffffff;
+        --border: #e5e7eb;
+        --shadow: rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Crimson Pro', Georgia, serif;
+        font-weight: 700;
+    }
+
+    /* Navigation */
+    nav {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        gap: 36px;
+    }
+
+    nav a {
+        padding: 20px 0;
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 500;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+    }
+
+    /* Layout */
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        color: var(--primary);
+    }
+
+    .year-header {
+        font-size: 1.8rem;
+        margin: 50px 0 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--border);
+        color: var(--secondary);
+    }
+
+    .pub-list {
+        list-style: none;
+    }
+
+    /* Publication Card */
+    .pub-item {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .pub-card {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .pub-image {
+        flex: 0 0 160px;
+    }
+
+    .pub-image img {
+        width: 160px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: #f3f4f6;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .pub-image img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    .pub-content {
+        flex: 1;
+    }
+
+    .pub-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        color: var(--text);
+    }
+
+    .pub-authors {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        margin-bottom: 4px;
+    }
+
+    .pub-authors .me {
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .pub-venue {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 10px;
+    }
+
+    .pub-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .tag {
+        padding: 4px 12px;
+        background: #eef2ff;
+        color: var(--highlight);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .pub-description {
+        font-size: 0.95rem;
+        color: var(--text-light);
+    }
+
+    .pub-links {
+        margin-top: 10px;
+        display: flex;
+        gap: 14px;
+    }
+
+    .pub-links a {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .pub-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 80px;
+        padding: 40px 20px;
+        text-align: center;
+        background: var(--primary);
+        color: rgba(255,255,255,0.75);
+        font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .pub-card {
+            flex-direction: column;
+        }
+
+        .pub-image img {
+            width: 100%;
+            height: 200px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html">Bio</a>
+            <a href="publications.html" class="active">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="index.html#service">Services</a>
+        </div>
+    </nav>
+
+```
+<div class="container">
+    <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <!-- 2026 -->
+        <h3 class="year-header">2026</h3>
+        <ul class="pub-list">
+            <!-- Early Jan 2026 -->
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/pvf-diffusion.png" alt="Plan Verify Fill">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">Plan, Verify and Fill: A Structured Parallel Decoding Approach for Diffusion Language Models</div>
+                        <div class="pub-authors">M. Li, H. Jiang, S. Chen, H. Fu, Y. Cai, B. Huang, T. Ye, <span class="me">X. Chen</span>, P. Van Hentenryck</div>
+                        <div class="pub-venue">arXiv preprint (2026)</div>
+                        <div class="pub-tags">
+                            <span class="tag">Diffusion Language Models</span>
+                            <span class="tag">Decoding Algorithms</span>
+                            <span class="tag">Parallel Inference</span>
+                        </div>
+                        <div class="pub-description">Introduces a structured plan–verify–fill decoding paradigm enabling parallel generation and improved controllability in diffusion language models.</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2601.12247" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Mid Jan 2026 -->
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/transformer-dropout.png" alt="Transformer Bernoulli Dropout">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">Understanding Transformer Encoder–Decoder Representations through Bernoulli Dropout</div>
+                        <div class="pub-authors"><span class="me">X. Chen</span>, J. Wang, P. Jian, Z. Yang, Z. Chen, K. Liao, Z. Guo</div>
+                        <div class="pub-venue">arXiv preprint (2026)</div>
+                        <div class="pub-tags">
+                            <span class="tag">Transformers</span>
+                            <span class="tag">Representation Learning</span>
+                            <span class="tag">Dropout</span>
+                        </div>
+                        <div class="pub-description">Analyzes internal representations of Transformer encoder–decoder models under Bernoulli dropout, providing insights into structure, robustness, and generalization.</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2601.17602" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Late Jan 2026 -->
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/agentic-ai-lab.png" alt="Agentic AI for Self-Driving Labs">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">Agentic AI for Self-Driving Laboratories in Soft Matter: Taxonomy, Benchmarks, and Open Challenges</div>
+                        <div class="pub-authors"><span class="me">X. Chen</span>, A. Wang, S. Yin, H. Jiang, D. Zhang</div>
+                        <div class="pub-venue">arXiv preprint (2026)</div>
+                        <div class="pub-tags">
+                            <span class="tag">Agentic AI</span>
+                            <span class="tag">Self-Driving Labs</span>
+                            <span class="tag">AI for Science</span>
+                        </div>
+                        <div class="pub-description">Systematic taxonomy and benchmarking framework for agentic AI systems in self-driving laboratories, with open challenges for soft matter research.</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2601.17920" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/ai-wikipedia.png" alt="AI Wikipedia">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">From Compute to Content: Building an AI-Wikipedia for Reliable and Efficient Artificial Intelligence</div>
+                        <div class="pub-authors">D. Zhang, <span class="me">X. Chen</span></div>
+                        <div class="pub-venue">Matter 2026 (In Press)</div>
+                        <div class="pub-tags">
+                            <span class="tag">AI Infrastructure</span>
+                            <span class="tag">Knowledge Systems</span>
+                        </div>
+                        <div class="pub-description">Perspective on building reliable and efficient AI systems through computation–content co-design.</div>
+                        <div class="pub-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 2025 -->
+        <h3 class="year-header">2025</h3>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/vl4sem.png" alt="VL4SEM">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">VL4SEM: A Few-Shot Vision–Language Framework for SEM Image Analysis in Materials Science</div>
+                        <div class="pub-authors"><span class="me">X. Chen</span>, D. Zhang, Z. Chen</div>
+                        <div class="pub-venue">arXiv preprint (2025)</div>
+                        <div class="pub-tags">
+                            <span class="tag">Vision–Language</span>
+                            <span class="tag">AI for Science</span>
+                        </div>
+                        <div class="pub-description">Few-shot VLM framework for SEM image understanding using LLMs, LoRA, and diffusion models.</div>
+                        <div class="pub-links">
+                            <a href="#" target="_blank">Paper</a>
+                            <a href="#" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/smart-bandages.png" alt="Smart Bandages">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">Photothermally Triggered Smart Bandages for Temperature-Controlled Fixation and Bone Regeneration</div>
+                        <div class="pub-authors">Y. Wang, J. Li, S. Yang, N. Bao, H. Jiang, <span class="me">X. Chen</span>, D. Zhang, L. Che, D. Song</div>
+                        <div class="pub-venue">Advanced Functional Materials 2025</div>
+                        <div class="pub-tags">
+                            <span class="tag">Biomedical Engineering</span>
+                            <span class="tag">Smart Materials</span>
+                        </div>
+                        <div class="pub-description">Photothermally activated smart bandages enabling temperature-controlled fixation and enhanced bone regeneration.</div>
+                        <div class="pub-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 2024 -->
+        <h3 class="year-header">2024</h3>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/color-perception.png" alt="Color Perception">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">Learning the Eye of the Beholder: Statistical Modeling and Estimation for Personalized Color Perception</div>
+                        <div class="pub-authors"><span class="me">X. Chen</span>, A. Xu, J. Wang, A. Pananjady</div>
+                        <div class="pub-venue">ICML Workshop & Allerton Conference 2024</div>
+                        <div class="pub-tags">
+                            <span class="tag">Statistical Learning</span>
+                            <span class="tag">Color Vision</span>
+                        </div>
+                        <div class="pub-description">Statistical framework for estimating individualized color perception using PAQ with theoretical guarantees.</div>
+                        <div class="pub-links">
+                            <a href="https://openreview.net/forum?id=rXxFQYZetF" target="_blank">Paper</a>
+                            <a href="https://github.com/xchen793/paq-in-color-vision" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/soft-electronics.png" alt="Soft Electronics">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">A Universal Zwitterionic Crosslinking Strategy for Designing Conductive Soft Electronics with Enhanced Mechanical Properties</div>
+                        <div class="pub-authors">J. Luo, K. Zhao, S. Wang, Y. Chen, L. Che, <span class="me">X. Chen</span>, D. Zhang, J. Yang, H. Yin</div>
+                        <div class="pub-venue">ACS Applied Materials & Interfaces 2024</div>
+                        <div class="pub-tags">
+                            <span class="tag">Soft Electronics</span>
+                            <span class="tag">Materials Science</span>
+                        </div>
+                        <div class="pub-description">Universal zwitterionic crosslinking strategy for conductive soft electronics with improved mechanical robustness.</div>
+                        <div class="pub-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="pub-item">
+                <div class="pub-card">
+                    <div class="pub-image">
+                        <img src="images/co2-capture.png" alt="CO2 Capture">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">Unlocking the Potential of CO₂ Capture: A Synergistic Hybridization Strategy for Polymeric Hydrogels</div>
+                        <div class="pub-authors">Y. Gu, G. Wang, <span class="me">X. Chen</span>, X. Xu, Y. Liu, J. Yang, D. Zhang</div>
+                        <div class="pub-venue">Small 2024</div>
+                        <div class="pub-tags">
+                            <span class="tag">CO₂ Capture</span>
+                            <span class="tag">Hydrogels</span>
+                        </div>
+                        <div class="pub-description">Synergistic hybridization strategy for polymeric hydrogels with enhanced CO₂ capture performance.</div>
+                        <div class="pub-links">
+                            <a href="#" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    © 2025 Xuanzhou "Lorraine" Chen · Georgia Institute of Technology
+</footer>
+```
+
+</body>
+</html>
