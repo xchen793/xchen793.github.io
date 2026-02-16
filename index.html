@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuanzhou "Lorraine" Chen | PhD Candidate</title>
+    <meta name="description" content="Xuanzhou Chen - PhD student in Machine Learning at Georgia Tech, researching statistical learning, AI for science, and vision-language models.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f4c75;
+            --highlight: #3282b8;
+            --text: #2d2d2d;
+            --text-light: #5a5a5a;
+            --bg: #fafafa;
+            --bg-card: #ffffff;
+            --border: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        nav {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            padding: 20px 0;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--highlight);
+            border-bottom-color: var(--highlight);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+        }
+
+        /* Profile Sidebar */
+        .profile-sidebar {
+            position: sticky;
+            top: 80px;
+            align-self: start;
+        }
+
+        .profile-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px var(--shadow);
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--border);
+        }
+
+        .profile-card h1 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .profile-card .position {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-card .affiliation {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--highlight);
+            text-align: left;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 15px;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--highlight);
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-links a[href$=".pdf"]::before {
+            content: '📄';
+            font-size: 16px;
+        }
+
+        .contact-links a[href^="mailto"]::before {
+            content: '✉';
+            font-size: 16px;
+        }
+
+        .contact-links a[href*="scholar"]::before {
+            content: '📚';
+            font-size: 16px;
+        }
+
+        .contact-links a[href*="github"]::before {
+            content: '💻';
+            font-size: 16px;
+        }
+
+        .contact-links a[href*="linkedin"]::before {
+            content: '🔗';
+            font-size: 16px;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent);
+            transform: translateX(3px);
+        }
+
+        /* Main Content */
+        .main-content {
+            min-width: 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--highlight));
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .about-content a {
+            color: var(--highlight);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Research Interests - Compact */
+        .research-interests {
+            margin-top: 25px;
+        }
+
+        .research-interests h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .interests-compact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            padding: 6px 14px;
+            background: var(--bg-card);
+            color: var(--highlight);
+            border: 1px solid var(--highlight);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .interest-tag:hover {
+            background: rgba(50, 130, 184, 0.05);
+        }
+
+        /* News & Education */
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .column-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .news-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .news-list li {
+            background: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--highlight);
+            box-shadow: 0 2px 8px var(--shadow);
+            margin-bottom: 12px;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--highlight);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .education-list {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .education-list::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--highlight));
+        }
+
+        .education-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--highlight);
+            border: 2px solid var(--bg);
+            box-shadow: 0 0 0 2px var(--highlight);
+        }
+
+        .education-item .degree {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .education-item .institution {
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+
+        .education-item .year {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        /* Awards - Compact List */
+        .awards-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .awards-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .awards-list li:last-child {
+            border-bottom: none;
+        }
+
+        .award-year {
+            font-size: 0.85rem;
+            color: var(--highlight);
+            font-weight: 600;
+            margin-right: 12px;
+        }
+
+        .award-name {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        /* Service */
+        .services-content {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        .service-category {
+            margin-bottom: 20px;
+        }
+
+        .service-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-category h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .service-category p, .service-category ul {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .service-category ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .profile-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            .profile-card h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="active">Bio</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="#service">Services</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <section id="about">
+                <h2>Bio</h2>
+                <div class="about-content">
+                    <p>I am a third-year PhD student in Machine Learning at Georgia Tech, advised by <a href="https://sites.gatech.edu/ashwin-pananjady/">Prof. Ashwin Pananjady</a>. My research sits at the intersection of statistical learning theory, high-dimensional statistics, and modern AI applications.</p>
+
+                    <p>I develop principled statistical and algorithmic frameworks for learning problems in high-dimensional settings, with a focus on understanding the fundamental limits and computational efficiency of learning algorithms. My work spans both theoretical foundations and practical applications in AI for science and vision-language models.</p>
+
+                    <p>Before joining Georgia Tech, I earned my M.S. in Computer Engineering from NYU (advised by <a href="https://engineering.nyu.edu/faculty/siddharth-garg">Prof. Siddharth Garg</a> and <a href="https://engineering.nyu.edu/faculty/elza-erkip">Prof. Elza Erkip</a>) and my B.S. in Mathematics from UW-Madison.</p>
+
+                    <div class="research-interests">
+                        <h3>Research Interests</h3>
+                        <div class="interests-compact">
+                            <span class="interest-tag">High-Dimensional Statistics</span>
+                            <span class="interest-tag">Statistical Learning Theory</span>
+                            <span class="interest-tag">Generative Models</span>
+                            <span class="interest-tag">Vision-Language Models</span>
+                            <span class="interest-tag">AI for Science</span>
+                            <span class="interest-tag">Computational-Statistical Tradeoffs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="news-education">
+                <div class="two-column-section">
+                    <div class="column-content">
+                        <h3>Selected News</h3>
+                        <ul class="news-list">
+                            <li>
+                                <div class="news-date">[02/2025]</div>
+                                <div style="color: var(--text-light); font-size: 0.95rem;">Won first place at ML@GT Student Conference!</div>
+                            </li>
+                            <li>
+                                <div class="news-date">[01/2025]</div>
+                                <div style="color: var(--text-light); font-size: 0.95rem;">VL4SEM paper submitted on vision-language models for materials science.</div>
+                            </li>
+                            <li>
+                                <div class="news-date">[10/2024]</div>
+                                <div style="color: var(--text-light); font-size: 0.95rem;">Presented at Allerton Conference on personalized color perception.</div>
+                            </li>
+                            <li>
+                                <div class="news-date">[08/2024]</div>
+                                <div style="color: var(--text-light); font-size: 0.95rem;">Paper accepted at ICML Workshop on High-dimensional Learning Dynamics.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="column-content">
+                        <h3>Education</h3>
+                        <ul class="education-list">
+                            <li class="education-item">
+                                <div class="degree">Ph.D. in Machine Learning</div>
+                                <div class="institution">Georgia Institute of Technology</div>
+                                <div class="year">2023 - 2027 (Expected)</div>
+                            </li>
+                            <li class="education-item">
+                                <div class="degree">M.S. in Computer Engineering</div>
+                                <div class="institution">New York University</div>
+                                <div class="year">2021 - 2023</div>
+                            </li>
+                            <li class="education-item">
+                                <div class="degree">B.S. in Mathematics</div>
+                                <div class="institution">UW-Madison</div>
+                                <div class="year">2016 - 2020</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="awards">
+                <h2>Honors & Awards</h2>
+                <ul class="awards-list">
+                    <li>
+                        <span class="award-year">[2025]</span>
+                        <span class="award-name">ML@GT Student Award (First Place), Georgia Tech</span>
+                    </li>
+                    <li>
+                        <span class="award-year">[2023]</span>
+                        <span class="award-name">Marion A. and Henry C. Bourne Fellowship, Georgia Tech</span>
+                    </li>
+                    <li>
+                        <span class="award-year">[2021]</span>
+                        <span class="award-name">Merit Scholarship, New York University</span>
+                    </li>
+                    <li>
+                        <span class="award-year">[2016-2020]</span>
+                        <span class="award-name">Dean's List (All Semesters), UW-Madison</span>
+                    </li>
+                    <li>
+                        <span class="award-year">[2018]</span>
+                        <span class="award-name">S Grade in Mathematical Contest in Modeling, UW-Madison</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="service">
+                <h2>Service</h2>
+                <div class="services-content">
+                    <div class="service-category">
+                        <h3>Conference Reviewer</h3>
+                        <p>AAAI (2024, 2025), NeurIPS (2024, 2025)</p>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h3>Teaching</h3>
+                        <ul>
+                            <li>Digital Image Processing (Graduate TA), Fall 2023, Georgia Tech</li>
+                            <li>Fundamentals of Machine Learning (Graduate TA), Spring 2023, Georgia Tech</li>
+                            <li>K12 Summer ML Teaching Program (Instructor), Summer 2022, Brooklyn, NY</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h3>Mentoring</h3>
+                        <p>Undergraduate mentee Xinyu Li (2023-2025), Georgia Institute of Technology</p>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h3>Invited Talks</h3>
+                        <p>Georgia Statistics Day 2024, Allerton Conference 2024, ICML Workshop 2024, ML@GT Student Conference 2025</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <img src="profile.jpg" alt="Xuanzhou Chen" class="profile-photo">
+                <h1>Xuanzhou "Lorraine" Chen</h1>
+                <div class="position">PhD Candidate</div>
+                <div class="affiliation">Georgia Institute of Technology</div>
+                <div class="contact-heading">Contact</div>
+                <div class="contact-links">
+                    <a href="CV.pdf" target="_blank">Curriculum Vitae</a>
+                    <a href="mailto:xchen920@gatech.edu">xchen920@gatech.edu</a>
+                    <a href="https://scholar.google.com/citations?user=IB0-_u0AAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <a href="https://github.com/xchen793" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/xuanzhou-chen/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 2025 Xuanzhou "Lorraine" Chen | Georgia Institute of Technology</

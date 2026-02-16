@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Xuanzhou "Lorraine" Chen</title>
+    <meta name="description" content="Research projects by Xuanzhou Chen - Interactive map of machine learning research areas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f4c75;
+            --highlight: #3282b8;
+            --text: #2d2d2d;
+            --text-light: #5a5a5a;
+            --bg: #fafafa;
+            --bg-card: #ffffff;
+            --border: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        nav {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .nav-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            padding: 20px 0;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--highlight);
+            border-bottom-color: var(--highlight);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .instructions {
+            background: var(--bg-card);
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px var(--shadow);
+            border-left: 4px solid var(--highlight);
+        }
+
+        .instructions h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .instructions p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        #tree-container {
+            background: var(--bg-card);
+            border-radius: 10px;
+            box-shadow: 0 3px 15px var(--shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .node circle {
+            cursor: pointer;
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+
+        .node circle:hover {
+            stroke-width: 3px;
+        }
+
+        .node text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            cursor: pointer;
+            max-width: 150px;
+            word-wrap: break-word;
+        }
+
+        .node.leaf text {
+            fill: #2ecc71;
+            font-weight: 600;
+        }
+
+        .link {
+            fill: none;
+            stroke: #9ca3af;
+            stroke-width: 1.5px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .instructions {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html">Bio</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="index.html#service">Services</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="instructions">
+            <h3>📌 Note</h3>
+            <p>Use your mouse scroll <strong>up and down</strong> to zoom in or out. You can also <strong>touch the chart to move</strong>, <strong>click node edges to collapse or expand</strong>. Leaf nodes contain clickable links, check out the corresponding project website or paper!</p>
+        </div>
+        
+        <div id="tree-container"></div>
+    </div>
+
+    <footer>
+        <p>© 2025 Xuanzhou "Lorraine" Chen | Georgia Institute of Technology</p>
+        <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9rem;">Last updated: February 2025</p>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        const data = {
+            name: "Research",
+            children: [
+                {
+                    name: "Human Query & Statistical Learning",
+                    children: [
+                        {
+                            name: "PAQ (Perceptual Adjustment Query)",
+                            url: "https://arxiv.org/abs/2309.04626",
+                            children: [
+                                { 
+                                    name: "PAQ in Color Perception (ICML'24, Allerton'24)", 
+                                    url: "https://openreview.net/forum?id=rXxFQYZetF"
+                                },
+                                { name: "Preference Learning" }
+                            ]
+                        },
+                        {
+                            name: "High-Dimensional Statistics",
+                            children: [
+                                { name: "Metric Learning" },
+                                { name: "Covariance Estimation" }
+                            ]
+                        },
+                        {
+                            name: "Estimation Theory",
+                            children: [
+                                { name: "PAQ Methods" },
+                                { name: "Sample Complexity Analysis" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "AI for Science",
+                    children: [
+                        {
+                            name: "Materials Design & Sustainability",
+                            children: [
+                                { name: "VL4SEM" 
+                                  , url: "https://www.nature.com/articles/s41467-025-21087-7"
+                                },
+                                { name: "Smart Bandages",
+                                  url: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202514519"
+                                },
+                                { name: "Soft Electronics Design", 
+                                  url: "https://pubs.acs.org/doi/abs/10.1021/acsami.4c13688"
+                                },
+                                { name: "CO₂ Capture Materials", 
+                                  url: "https://onlinelibrary.wiley.com/doi/pdf/10.1002/smll.202402529"
+                                }
+                            ]
+                        },
+                        {
+                            name: "Agentic AI for Scientific Discovery",
+                            children: [
+                                { 
+                                    name: "[Survey] Agentic AI for SDLs",
+                                    url: "https://arxiv.org/pdf/2601.17920"
+                                },
+                                {
+                                    name: "[Perspective] AI-Wikipedia",
+                                    url: "https://www.cell.com/matter/abstract/S2590-2385(25)00650-2"
+                                },
+                                { name: "[Coming] Evolving Agent for NAS" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Generative Models",
+                    children: [
+                        {
+                            name: "Diffusion Models",
+                            children: [
+                                { name: "Image Synthesis" },
+                                { name: "Conditional Generation" }
+                            ]
+                        },
+                        {
+                            name: "Vision-Language Models",
+                            children: [
+                                { name: "Multi-Modal Understanding" },
+                                { name: "Few-Shot Adaptation" },
+                                { name: "LoRA Fine-tuning" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Computational-Statistical Tradeoffs",
+                    children: [
+                        {
+                            name: "Algorithm Design",
+                            children: [
+                                { name: "Efficient Estimation" },
+                                { name: "Approximation Algorithms" }
+                            ]
+                        },
+                        {
+                            name: "Information Theory",
+                            children: [
+                                { name: "Minimax Rates" },
+                                { name: "Lower Bounds" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        const margin = {top: 20, right: 120, bottom: 20, left: 120};
+        const width = 1200 - margin.left - margin.right;
+        const height = 1000 - margin.top - margin.bottom;
+
+        let i = 0;
+        let duration = 750;
+        let root;
+
+        const tree = d3.tree().size([height, width]);
+
+        const svg = d3.select("#tree-container")
+            .append("svg")
+            .attr("width", width + margin.right + margin.left)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Add zoom
+        const zoom = d3.zoom()
+            .scaleExtent([0.3, 3])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+
+        root = d3.hierarchy(data, d => d.children);
+        root.x0 = height / 2;
+        root.y0 = 0;
+
+        // Collapse after the second level
+        root.children.forEach(collapse);
+
+        update(root);
+
+        function collapse(d) {
+            if (d.children) {
+                d._children = d.children;
+                d._children.forEach(collapse);
+                d.children = null;
+            }
+        }
+
+        function update(source) {
+            const treeData = tree(root);
+            const nodes = treeData.descendants();
+            const links = treeData.descendants().slice(1);
+
+            // Normalize for fixed-depth
+            nodes.forEach(d => { d.y = d.depth * 220 });
+
+            // Update nodes
+            const node = g.selectAll('g.node')
+                .data(nodes, d => d.id || (d.id = ++i));
+
+            const nodeEnter = node.enter().append('g')
+                .attr('class', d => 'node' + (!d.children && !d._children ? ' leaf' : ''))
+                .attr("transform", d => `translate(${source.y0},${source.x0})`)
+                .on('click', click);
+
+            nodeEnter.append('circle')
+                .attr('r', 1e-6)
+                .style("fill", d => {
+                    if (d.depth === 0) return "#1a1a2e";
+                    if (d.depth === 1) return "#0f4c75";
+                    if (d.depth === 2) return "#3282b8";
+                    if (d.data.url) return "#2ecc71";
+                    return d._children ? "#5dade2" : "#fff";
+                });
+
+            nodeEnter.append('text')
+                .attr("dy", "1.8em")
+                .attr("x", 0)
+                .attr("text-anchor", "middle")
+                .text(d => d.data.name)
+                .style("fill-opacity", 1e-6);
+
+            const nodeUpdate = nodeEnter.merge(node);
+
+            nodeUpdate.transition()
+                .duration(duration)
+                .attr("transform", d => `translate(${d.y},${d.x})`);
+
+            nodeUpdate.select('circle')
+                .attr('r', d => {
+                    if (d.depth === 0) return 10;
+                    if (d.depth === 1) return 8;
+                    return 6;
+                })
+                .style("fill", d => {
+                    if (d.depth === 0) return "#1a1a2e";
+                    if (d.depth === 1) return "#0f4c75";
+                    if (d.depth === 2) return "#3282b8";
+                    if (d.data.url) return "#2ecc71";
+                    return d._children ? "#5dade2" : "#fff";
+                })
+                .attr('cursor', 'pointer');
+
+            nodeUpdate.select('text')
+                .style("fill-opacity", 1)
+                .style("font-weight", d => {
+                    if (d.depth === 0) return "700";
+                    if (d.depth <= 2) return "600";
+                    return "500";
+                })
+                .style("font-size", d => {
+                    if (d.depth === 0) return "15px";
+                    if (d.depth === 1) return "14px";
+                    return "13px";
+                });
+
+            const nodeExit = node.exit().transition()
+                .duration(duration)
+                .attr("transform", d => `translate(${source.y},${source.x})`)
+                .remove();
+
+            nodeExit.select('circle')
+                .attr('r', 1e-6);
+
+            nodeExit.select('text')
+                .style('fill-opacity', 1e-6);
+
+            // Update links
+            const link = g.selectAll('path.link')
+                .data(links, d => d.id);
+
+            const linkEnter = link.enter().insert('path', "g")
+                .attr("class", "link")
+                .attr('d', d => {
+                    const o = {x: source.x0, y: source.y0};
+                    return diagonal(o, o);
+                });
+
+            const linkUpdate = linkEnter.merge(link);
+
+            linkUpdate.transition()
+                .duration(duration)
+                .attr('d', d => diagonal(d, d.parent));
+
+            link.exit().transition()
+                .duration(duration)
+                .attr('d', d => {
+                    const o = {x: source.x, y: source.y};
+                    return diagonal(o, o);
+                })
+                .remove();
+
+            nodes.forEach(d => {
+                d.x0 = d.x;
+                d.y0 = d.y;
+            });
+        }
+
+        function diagonal(s, d) {
+            return `M ${s.y} ${s.x}
+                    C ${(s.y + d.y) / 2} ${s.x},
+                      ${(s.y + d.y) / 2} ${d.x},
+                      ${d.y} ${d.x}`;
+        }
+
+        function click(event, d) {
+            if (d.data.url) {
+                window.open(d.data.url, '_blank');
+            } else {
+                if (d.children) {
+                    d._children = d.children;
+                    d.children = null;
+                } else {
+                    d.children = d._children;
+                    d._children = null;
+                }
+                update(d);
+            }
+        }
+    </script>
+</body>
+</html>
